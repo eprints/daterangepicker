@@ -1,0 +1,12 @@
+.ep_datepicker
+{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.ep_datepicker_icon
+{
+  height: 20px;
+  position: relative;
+  top: 4px;
+}
