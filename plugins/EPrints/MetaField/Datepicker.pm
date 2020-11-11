@@ -26,7 +26,7 @@ sub get_property_defaults
 #for use when rendering a date picker in a compound field context - need to set field's render_input property (see Lists sortable field for example)
 sub render_input_field_compound
 {
-	my( $self, $session, $value, $basename, $staff, $obj ) = @_;
+	my( $self, $session, $value, $basename, $staff, $obj, $one_field_component ) = @_;
 	my $maxlength = $self->get_max_input_size;
 	my $size = ( $maxlength > $self->{input_cols} ?
 					$self->{input_cols} : 
@@ -45,7 +45,7 @@ sub render_input_field_compound
 		push @classes,
 		join('_', 'ep', $self->{dataset}->base_id, $self->name);
 	}
-	
+
 	$input = $session->render_noenter_input_field(
 		class=> join(' ', @classes),
 		name => $basename,
@@ -53,7 +53,9 @@ sub render_input_field_compound
 		value => $value,
 		size => $size,
 		readonly => $readonly,
-		maxlength => $maxlength );
+		maxlength => $maxlength,
+		'aria-labelledby' => $self->get_labelledby( $basename ),
+		'aria-describedby' => $self->get_describedby( $basename, $one_field_component ) );
 
         my $random_id = "field_" . int(rand(1e16));
 	my $format = $self->get_property( "format" );
