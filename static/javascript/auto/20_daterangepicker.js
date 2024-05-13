@@ -95,8 +95,8 @@
         if (typeof options.template !== 'string' && !(options.template instanceof $))
             options.template = '<div class="daterangepicker dropdown-menu">' +
                 '<div class="calendar left">' +
-                    '<div class="daterangepicker_input"><div id="daterangepicker_start_label">Select a date</div' +
-                      '<input class="input-mini form-control" type="text" name="daterangepicker_start" value="" aria-labelledby="daterangepicker_start_label" />' +
+                    '<div class="daterangepicker_input">' +
+                      '<input class="input-mini form-control" type="text" name="daterangepicker_start" value="" />' +
                       '<i class="fa fa-calendar glyphicon glyphicon-calendar"></i>' +
                       '<div class="calendar-time">' +
                         '<div></div>' +
@@ -106,8 +106,8 @@
                     '<div class="calendar-table"></div>' +
                 '</div>' +
                 '<div class="calendar right">' +
-                    '<div class="daterangepicker_input"><div id="daterangepicker_end_label">Select a date</div>' +
-                      '<input class="input-mini form-control" type="text" name="daterangepicker_end" value="" aria-labelledby="daterangepicker_end_label" />' +
+                    '<div class="daterangepicker_input">' +
+                      '<input class="input-mini form-control" type="text" name="daterangepicker_end" value="" />' +
                       '<i class="fa fa-calendar glyphicon glyphicon-calendar"></i>' +
                       '<div class="calendar-time">' +
                         '<div></div>' +

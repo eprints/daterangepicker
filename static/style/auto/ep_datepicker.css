@@ -10,11 +10,3 @@
   position: relative;
   top: 4px;
 }
-
-#daterangepicker_start_label, #daterangepicker_end_label 
-{
-	font-weight: bold;
-	font-size: 1.3em;
-	width: 100%;
-	text-align: center;
-}
