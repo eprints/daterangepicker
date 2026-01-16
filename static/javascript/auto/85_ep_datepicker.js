@@ -4,7 +4,7 @@ function ep_datepicker_pre(id)
   var y = jQuery( "#" + id + "_year" ).val();
   var m = jQuery( "#" + id + "_month" ).val();
   var d = jQuery( "#" + id + "_day" ).val();
-  if( y == "" ) { y = "2020"; }
+  if( y == "" ) { y = new Date().getFullYear(); }
   if( m == "00" ) { m = "01"; }
   if( d == "00" ) { d = "01"; }
   jQuery( "#" + id + "_datepicker" ).val( m+"/"+d+"/"+y ); // us format
